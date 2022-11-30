@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gitstar"
+version = "0.1.0"
+description = "Github CLI"
+authors = ["Damian <debitCredit@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.28.1"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.7"
+flake9 = "^3.8.3.post2"
+black = "^22.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
