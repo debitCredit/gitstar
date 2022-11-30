@@ -10,10 +10,20 @@ readme = "README.md"
 python = "^3.11"
 requests = "^2.28.1"
 
+[tool.flake8]
+# I have no clue why this is 10, maybe I ought to look it up
+max-complexity = 10
+# We allow longer lines since 80 is quite short
+max-line-length = 100
+
+[tool.black]
+line-length=100
+
 [tool.poetry.group.dev.dependencies]
 pylint = "^2.15.7"
 flake9 = "^3.8.3.post2"
 black = "^22.10.0"
+mypy = "^0.991"
 
 [build-system]
 requires = ["poetry-core"]

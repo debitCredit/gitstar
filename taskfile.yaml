@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  lint:
+    desc: Lints the code and reports on issues.
+    cmds:
+      - poetry run black --check gitstar
+      - poetry run pylint gitstar
+      - poetry run flake8 gitstar --show-source --statistics --count
+      - python3 -m mypy deathstar
+  install:
+    desc: Installs the dependencies.
+    cmds:
+      - poetry install
